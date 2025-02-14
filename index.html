@@ -7,7 +7,9 @@
 
   <body>
     <div id="app">
-      <p>Hey</p>
+      <p>{{ firstName }}</p>
+      <p>{{ lastName }}</p>
+      <!-- ^^^lastName不會顯示，要寫在data()的回傳object中才能順利顯示 -->
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
