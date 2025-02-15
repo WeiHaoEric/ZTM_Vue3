@@ -7,11 +7,15 @@
 
   <body>
     <div id="app" v-cloak>
-      <!-- 下方程式可以運作，不過總是顯得彆腳 -->
-      <p>{{ `${firstName}, ${lastName.toUpperCase()}` }}</p>
-
-      <!-- 呼叫method來使用 -->
       <p>{{fullName()}}</p>
+
+      <hr />
+
+      <label>FirstName:</label>
+      <input type="text" v-model="firstName" />
+
+      <label>LastName:</label>
+      <input type="text" v-model="lastName" />
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

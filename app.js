@@ -13,8 +13,3 @@ const vm = Vue.createApp({
     },
   },
 }).mount("#app");
-
-// 設定2秒鐘之後，變更firstName的值
-setTimeout(() => {
-  vm.firstName = "Eric";
-}, 4000);
