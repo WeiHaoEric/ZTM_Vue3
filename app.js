@@ -7,9 +7,14 @@ const vm = Vue.createApp({
       lastName: "OK",
     };
   },
+  methods: {
+    fullName() {
+      return `${this.firstName}, ${this.lastName.toUpperCase()}`;
+    },
+  },
 }).mount("#app");
 
 // 設定2秒鐘之後，變更firstName的值
 setTimeout(() => {
   vm.firstName = "Eric";
-}, 2000);
+}, 4000);
