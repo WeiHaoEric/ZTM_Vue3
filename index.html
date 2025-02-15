@@ -6,10 +6,12 @@
   </head>
 
   <body>
-    <div id="app">
-      <p>{{ firstName }}</p>
-      <p>{{ lastName }}</p>
-      <!-- ^^^lastName不會顯示，要寫在data()的回傳object中才能順利顯示 -->
+    <div id="app" v-cloak>
+      <!-- 下方程式可以運作，不過總是顯得彆腳 -->
+      <p>{{ `${firstName}, ${lastName.toUpperCase()}` }}</p>
+
+      <!-- 呼叫method來使用 -->
+      <p>{{fullName()}}</p>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
