@@ -9,6 +9,16 @@
     <div id="app" v-cloak>
       <p>{{fullName()}}</p>
 
+      <!-- 原始v-bind的方法 -->
+      <p>
+        <a v-bind:href="url">{{url}}</a>
+      </p>
+
+      <!-- 簡化的寫法 -->
+      <p>
+        <a :href="url">{{url}}</a>
+      </p>
+
       <hr />
 
       <label>FirstName:</label>
