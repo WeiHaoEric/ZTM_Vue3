@@ -13,6 +13,10 @@ const vm = Vue.createApp({
     fullName() {
       return `${this.firstName}, ${this.lastName.toUpperCase()}`;
     },
+
+    onLastName(event) {
+      this.lastName = event.target.value;
+    },
   },
 }).mount("#app");
 

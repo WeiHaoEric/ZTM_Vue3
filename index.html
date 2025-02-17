@@ -20,7 +20,17 @@
       <input type="text" v-model="firstName" />
 
       <label>LastName:</label>
-      <input type="text" v-model="lastName" />
+      <!-- 原本的v-model -->
+      <!-- <input type="text" v-model="lastName" /> -->
+
+      <!-- input event, 方法1 -->
+      <input
+        type="text"
+        :value="lastName"
+        @input="event=>lastName=event.target.value"
+      />
+      <!-- input event, 方法2 -->
+      <!-- <input type="text" :value="lastName" @input="onLastName" /> -->
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
