@@ -9,15 +9,10 @@
     <div id="app" v-cloak>
       <p>{{fullName()}}</p>
 
-      <!-- 原始v-bind的方法 -->
-      <p>
-        <a v-bind:href="url">{{url}}</a>
-      </p>
-
-      <!-- 簡化的寫法 -->
-      <p>
-        <a :href="url">{{url}}</a>
-      </p>
+      <!-- 使用花括號，會以字串進行處理 -->
+      <p>{{raw_url}}</p>
+      <!-- 使用v-html則可以做轉譯 -->
+      <p v-html="raw_url">{{raw_url}}</p>
 
       <hr />
 
