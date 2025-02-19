@@ -22,8 +22,10 @@
         >則需要按下Enter才會變更
       </p>
       <input type="text" v-model.lazy.number="age" />
-      <button @click="age++">Increase</button>
-      <button @click="age--">Decrease</button>
+      <button @click="increase()">Increase</button>
+      <!-- <button @click="age++">Increase</button> -->
+      <button @click="decrease()">Decrease</button>
+      <p>{{myAge}}</p>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

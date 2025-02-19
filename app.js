@@ -22,6 +22,21 @@ const vm = Vue.createApp({
       console.log(`msg:${msg}`);
       this.lastName = event.target.value;
     },
+
+    increase(event) {
+      console.log("methods: increase");
+      return this.age++;
+    },
+    decrease(event) {
+      console.log("methods: decrease");
+      return this.age--;
+    },
+  },
+  computed: {
+    myAge() {
+      console.log("computed");
+      return this.age;
+    },
   },
 }).mount("#app");
 
