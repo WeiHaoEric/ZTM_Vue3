@@ -7,27 +7,23 @@
 
   <body>
     <div id="app" v-cloak>
-      <p>{{fullName()}}</p>
+      <h2 style="color: green">{{`${age}的type:${typeof age}`}}</h2>
 
-      <!-- 使用花括號，會以字串進行處理 -->
-      <p>{{raw_url}}</p>
-      <!-- 使用v-html則可以做轉譯 -->
-      <p v-html="raw_url">{{raw_url}}</p>
+      <p>v-model="age" 輸入後變成string</p>
+      <input type="text" v-model="age" />
 
       <hr />
+      <p>v-model.number="age" 宣告這個可以維持number</p>
+      <input type="text" v-model.number="age" />
 
-      <label>FirstName:</label>
-      <input type="text" v-model="firstName" />
-
-      <label>LastName:</label>
-      <!-- 原本的v-model -->
-      <!-- <input type="text" v-model="lastName" /> -->
-
-      <input
-        type="text"
-        :value="lastName"
-        @input.prevent="onLastName($event, 'call onLastName func!!')"
-      />
+      <hr />
+      <p>
+        v-model.lazy.number="age" 加個<span style="color: lightcoral">lazy</span
+        >則需要按下Enter才會變更
+      </p>
+      <input type="text" v-model.lazy.number="age" />
+      <button @click="age++">Increase</button>
+      <button @click="age--">Decrease</button>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
