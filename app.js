@@ -14,7 +14,11 @@ const vm = Vue.createApp({
       return `${this.firstName}, ${this.lastName.toUpperCase()}`;
     },
 
-    onLastName(event) {
+    onLastName(event, msg) {
+      //   event.preventDefault();
+      //   ^^^ 防止event bubble的發生，但vue提供更簡單的寫法
+
+      console.log(`msg:${msg}`);
       this.lastName = event.target.value;
     },
   },
