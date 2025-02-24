@@ -1,1 +1,7 @@
-const vm = Vue.createApp().mount("#app");
+const vm = Vue.createApp({
+  data() {
+    return {
+      isPurple: false,
+    };
+  },
+}).mount("#app");
