@@ -1,9 +1,13 @@
 h1 {
   color: #cc3300;
-}
 
-h1:hover {
-  color: darken(#cc3300, 15%);
+  span {
+    color: yellowgreen;
+  }
+
+  &:hover {
+    color: darken(#cc3300, 15%);
+  }
 }
 
 :root {
