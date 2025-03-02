@@ -1,14 +1,21 @@
 <template>
-  <p>I'm App</p> 
+  <p>I'm App</p>
   <!-- 新增I'm App -->
-  <Greeting></Greeting>
+  <greeting></greeting>
+  <user :age="age"></user>
 </template>
 
 <script>
 import Greeting from "@/components/Greeting.vue";
+import User from "./components/User.vue";
 
 export default {
   name: "App",
-  components: { Greeting },
+  components: { Greeting, User },
+  data() {
+    return {
+      age: 20,
+    };
+  },
 };
 </script>
