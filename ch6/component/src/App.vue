@@ -1,4 +1,6 @@
 <template>
+  <p>I'm App</p> 
+  <!-- 新增I'm App -->
   <Greeting></Greeting>
 </template>
 
