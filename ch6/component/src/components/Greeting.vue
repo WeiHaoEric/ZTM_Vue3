@@ -13,8 +13,9 @@ export default {
 };
 </script>
 
-<style scoped>
-p {
-  color: red;
+<style scoped lang="scss">
+@use "sass:color";
+p:hover {
+  color: color.scale(#c44, $lightness: 40%);
 }
 </style>
