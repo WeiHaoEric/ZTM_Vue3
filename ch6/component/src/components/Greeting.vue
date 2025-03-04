@@ -1,5 +1,6 @@
 <template>
-  <p>{{ msg }}</p>
+  <p v-if="age >= 25">You are 25!!</p>
+  <p v-else>Your age is {{ age }} years old</p>
 </template>
 
 <script>
@@ -10,6 +11,7 @@ export default {
       msg: "Hello World!",
     };
   },
+  props: ["age"],
 };
 </script>
 

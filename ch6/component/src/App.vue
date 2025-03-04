@@ -1,8 +1,9 @@
 <template>
   <p>I'm App</p>
-  <!-- 新增I'm App -->
-  <greeting></greeting>
-  <user :age="age"></user>
+
+  <button type="button" @click="age++">Increase age</button>
+  <greeting :age="age"></greeting>
+  <user :age="age" @updateAge="age++"></user>
 </template>
 
 <script>
